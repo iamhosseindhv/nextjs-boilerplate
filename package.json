@@ -1,0 +1,30 @@
+{
+    "name": "nextjs-materialui-boilerplate",
+    "description": "A boilerplate for nextjs apps that can use material-ui, has animated routing and can be easily deployed to heroku.",
+    "main": "index.js",
+    "license": "MIT",
+    "author": {
+        "name": "Hossein Dehnokhalaji",
+        "email": "hossein.dehnavi98@yahoo.com",
+        "url": "https://github.com/iamhosseindhv/nextjs-boilerplate"
+    },
+    "repository": {
+        "url": "git+https://github.com/iamhosseindhv/nextjs-boilerplate.git",
+        "type": "git"
+    },
+    "scripts": {
+        "dev": "next -p 8000",
+        "build": "next build",
+        "start": "next start",
+        "heroku-postbuild": "next build"
+    },
+    "dependencies": {
+        "@material-ui/core": "1.4.3",
+        "jss": "9.8.7",
+        "next": "6.1.1",
+        "nprogress": "0.2.0",
+        "react": "16.4.2",
+        "react-dom": "16.4.2",
+        "react-transition-group": "2.4.0"
+    }
+}
