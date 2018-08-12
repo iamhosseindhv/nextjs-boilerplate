@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import App, { Container } from 'next/app';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
@@ -86,7 +87,8 @@ class MyApp extends App {
                     .fix-container {
                         position: fixed;
                     }
-                `}</style>
+                `}
+                </style>
             </Container>
         );
     }

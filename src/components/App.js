@@ -1,4 +1,8 @@
-export default ({ children }) => (
+/* eslint-disable react/jsx-one-expression-per-line */
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const App = ({ children }) => (
     <main>
         {children}
         <style jsx global>{`
@@ -37,6 +41,13 @@ export default ({ children }) => (
             button:focus {
                 outline: none;
             }
-        `}</style>
+        `}
+        </style>
     </main>
 );
+
+App.propTypes = {
+    children: PropTypes.element.isRequired,
+};
+
+export default App;

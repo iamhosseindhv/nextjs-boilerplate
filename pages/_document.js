@@ -10,14 +10,16 @@ class MyDocument extends Document {
         return (
             <html lang="en" dir="ltr">
                 <Head>
-                    <title>My App</title>
+                    <title>
+                        My App
+                    </title>
                     <meta charSet="utf-8" />
                     {/* Use minimum-scale=1 to enable GPU rasterization */}
                     <meta
                         name="viewport"
                         content={
-                            'user-scalable=0, initial-scale=1, ' +
-                            'minimum-scale=1, width=device-width, height=device-height'
+                            'user-scalable=0, initial-scale=1, '
+                            + 'minimum-scale=1, width=device-width, height=device-height'
                         }
                     />
                     {/* PWA primary color */}
@@ -36,11 +38,12 @@ class MyDocument extends Document {
     }
 }
 
-MyDocument.getInitialProps = ctx => {
+MyDocument.getInitialProps = (ctx) => {
     let pageContext;
-    const page = ctx.renderPage(Component => {
-        const WrappedComponent = props => {
-            pageContext = props.pageContext;
+    const page = ctx.renderPage((Component) => {
+        const WrappedComponent = (props) => {
+            const { pageContext: pageCtx } = props;
+            pageContext = pageCtx;
             return <Component {...props} />;
         };
 
@@ -54,7 +57,6 @@ MyDocument.getInitialProps = ctx => {
     return {
         ...page,
         pageContext,
-        // Styles fragment is rendered after the app and page rendering finish.
         styles: (
             <Fragment>
                 <style

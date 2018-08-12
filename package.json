@@ -13,18 +13,30 @@
         "type": "git"
     },
     "scripts": {
-        "dev": "next -p 8000",
+        "dev": "next",
         "build": "next build",
         "start": "next start -p $PORT",
-        "heroku-postbuild": "next build"
+        "heroku-postbuild": "next build",
+        "eslint": "eslint . --ext .js,.jsx"
     },
     "dependencies": {
         "@material-ui/core": "1.4.3",
         "jss": "9.8.7",
         "next": "6.1.1",
         "nprogress": "0.2.0",
+        "prop-types": "15.6.2",
         "react": "16.4.2",
         "react-dom": "16.4.2",
-        "react-transition-group": "2.4.0"
+        "react-jss": "8.6.1",
+        "react-transition-group": "2.4.0",
+        "styled-jsx": "3.0.2"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.6",
+        "eslint": "^5.3.0",
+        "eslint-config-airbnb": "^17.0.0",
+        "eslint-plugin-import": "^2.13.0",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-react": "^7.10.0"
     }
 }

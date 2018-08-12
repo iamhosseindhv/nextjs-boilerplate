@@ -36,11 +36,12 @@ const getPageContext = () => {
     }
 
     // Reuse context on the client-side.
+    /* eslint-disable no-underscore-dangle */
     if (!global.__INIT_MATERIAL_UI__) {
         global.__INIT_MATERIAL_UI__ = createPageContext();
     }
 
     return global.__INIT_MATERIAL_UI__;
-}
+};
 
 export default getPageContext;
