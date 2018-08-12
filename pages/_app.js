@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
-import getPageContext from '../src/getPageContext';
+import getPageContext from '../src/utils/getPageContext';
 import Layout from '../src/components/Layout';
 
 class MyApp extends App {
