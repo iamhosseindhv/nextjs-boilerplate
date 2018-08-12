@@ -590,7 +590,7 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@material-ui/core@^1.4.3":
+"@material-ui/core@1.4.3":
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-1.4.3.tgz#e6bc29b441c07932cc64fffb02670792b119fb8e"
   dependencies:
@@ -2478,7 +2478,7 @@ jss-vendor-prefixer@^7.0.0:
   dependencies:
     css-vendor "^0.3.8"
 
-jss@^9.3.3, jss@^9.7.0, jss@^9.8.7:
+jss@9.8.7, jss@^9.3.3, jss@^9.7.0:
   version "9.8.7"
   resolved "https://registry.yarnpkg.com/jss/-/jss-9.8.7.tgz#ed9763fc0f2f0260fc8260dac657af61e622ce05"
   dependencies:
@@ -2806,7 +2806,7 @@ next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-next@^6.1.1:
+next@6.1.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/next/-/next-6.1.1.tgz#b86d6b773871cfeb189b926eb7089d12f291668e"
   dependencies:
@@ -2972,7 +2972,7 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-nprogress@^0.2.0:
+nprogress@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
 
@@ -3350,7 +3350,7 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^16.4.2:
+react-dom@16.4.2:
   version "16.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.4.2.tgz#4afed569689f2c561d2b8da0b819669c38a0bda4"
   dependencies:
@@ -3381,7 +3381,7 @@ react-lifecycles-compat@3.0.4, react-lifecycles-compat@^3.0.2, react-lifecycles-
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-transition-group@^2.2.1, react-transition-group@^2.4.0:
+react-transition-group@2.4.0, react-transition-group@^2.2.1:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.4.0.tgz#1d9391fabfd82e016f26fabd1eec329dbd922b5a"
   dependencies:
@@ -3390,7 +3390,7 @@ react-transition-group@^2.2.1, react-transition-group@^2.4.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.4.2:
+react@16.4.2:
   version "16.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.4.2.tgz#2cd90154e3a9d9dd8da2991149fdca3c260e129f"
   dependencies:
