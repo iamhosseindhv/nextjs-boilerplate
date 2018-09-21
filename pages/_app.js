@@ -63,16 +63,16 @@ class MyApp extends App {
                     opacity: 0;
                     transition: opacity 800ms;
                     }
+
                     .fadeTranslate-enter {
                     opacity: 0;
-                    transform: translate(0, -3vh);
+                    transform: translate(0, 12px);
                     position: fixed;
                     }
-
                     .fadeTranslate-enter.fadeTranslate-enter-active {
                         opacity: 1;
                         transform: translate(0, 0);
-                        transition: opacity 500ms ease-in 500ms, transform 500ms ease-in-out 500ms;
+                        transition: opacity 250ms ease-in 250ms, transform 250ms ease-in-out 250ms;
                     }
                     .fadeTranslate-exit {
                         opacity: 1;
@@ -81,9 +81,10 @@ class MyApp extends App {
                     } 
                     .fadeTranslate-exit.fadeTranslate-exit-active {
                         opacity: 0;
-                        transform: translate(0, 3vh);
-                        transition: opacity 300ms ease-in, transform 300ms ease-in-out;
+                        transform: translate(0, 12px);
+                        transition: opacity 175ms ease-in, transform 175ms ease-in-out;
                     }
+
                     .fix-container {
                         position: fixed;
                     }
