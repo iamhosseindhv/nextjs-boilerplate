@@ -32,8 +32,8 @@ class MyApp extends App {
                     <TransitionGroup>
                         <CSSTransition
                             key={this.props.router.route}
-                            // classNames="fadeTranslate"
-                            classNames="fade"
+                            classNames="fadeTranslate"
+                            // classNames="fade"
                             timeout={1000}
                         >
                             <JssProvider
@@ -53,21 +53,21 @@ class MyApp extends App {
                 </Layout>
                 <style jsx global>{`
                     .fade-enter {
-                    opacity: 0;
+                        opacity: 0;
                     }
                     .fade-enter-active {
-                    opacity: 1;
-                    transition: opacity 800ms;
+                        opacity: 1;
+                        transition: opacity 800ms;
                     }
                     .fade-exit-active {
-                    opacity: 0;
-                    transition: opacity 800ms;
+                        opacity: 0;
+                        transition: opacity 800ms;
                     }
 
                     .fadeTranslate-enter {
-                    opacity: 0;
-                    transform: translate(0, 12px);
-                    position: fixed;
+                        opacity: 0;
+                        transform: translate(0, 12px);
+                        position: fixed;
                     }
                     .fadeTranslate-enter.fadeTranslate-enter-active {
                         opacity: 1;
@@ -84,7 +84,7 @@ class MyApp extends App {
                         transform: translate(0, 12px);
                         transition: opacity 175ms ease-in, transform 175ms ease-in-out;
                     }
-
+                    
                     .fix-container {
                         position: fixed;
                     }
