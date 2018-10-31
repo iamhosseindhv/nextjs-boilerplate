@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import App, { Container } from 'next/app';
+import Head from 'next/head';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -28,6 +29,11 @@ class MyApp extends App {
         const { Component, pageProps } = this.props;
         return (
             <Container>
+                <Head>
+                    <title>
+                        My App
+                    </title>
+                </Head>
                 <Layout>
                     <TransitionGroup>
                         <CSSTransition

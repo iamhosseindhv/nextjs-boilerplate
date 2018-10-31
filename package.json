@@ -13,16 +13,17 @@
         "type": "git"
     },
     "scripts": {
-        "dev": "next",
-        "build": "next build",
-        "start": "next start -p $PORT",
-        "heroku-postbuild": "next build",
+        "server": "NODE_ENV=development node server.js",
+        "build": "NODE_ENV=production next build",
+        "start": "NODE_ENV=production node server.js",
+        "heroku-postbuild": "NODE_ENV=production next build",
         "eslint": "eslint . --ext .js,.jsx"
     },
     "dependencies": {
-        "@material-ui/core": "1.4.3",
+        "@material-ui/core": "3.3.2",
+        "express": "4.16.4",
         "jss": "9.8.7",
-        "next": "6.1.1",
+        "next": "7.0.2",
         "nprogress": "0.2.0",
         "prop-types": "15.6.2",
         "react": "16.4.2",
