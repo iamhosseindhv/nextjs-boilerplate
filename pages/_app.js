@@ -5,22 +5,23 @@ import Head from 'next/head';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import JssProvider from 'react-jss/lib/JssProvider';
-import getPageContext from '../src/utils/getPageContext';
+import theme from '../src/utils/theme';
 import Layout from '../src/components/Layout';
 
 class MyApp extends App {
-    constructor(props) {
-        super(props);
-        this.pageContext = getPageContext();
-    }
+    static getInitialProps = async ({ Component, ctx }) => {
+        let pageProps = {};
+        if (Component.getInitialProps) {
+            pageProps = await Component.getInitialProps(ctx);
+        }
 
-    pageContext = null;
+        return { pageProps };
+    };
 
     componentDidMount = () => {
         // Remove the server-side injected CSS.
         const jssStyles = document.querySelector('#jss-server-side');
-        if (jssStyles && jssStyles.parentNode) {
+        if (jssStyles) {
             jssStyles.parentNode.removeChild(jssStyles);
         }
     };
@@ -30,9 +31,8 @@ class MyApp extends App {
         return (
             <Container>
                 <Head>
-                    <title>
-                        My App
-                    </title>
+                    <title>My App</title>
+                    <link rel="stylesheet" type="text/css" href="/static/routes.css" />
                 </Head>
                 <Layout>
                     <TransitionGroup>
@@ -42,60 +42,13 @@ class MyApp extends App {
                             // classNames="fade"
                             timeout={1000}
                         >
-                            <JssProvider
-                                registry={this.pageContext.sheetsRegistry}
-                                generateClassName={this.pageContext.generateClassName}
-                            >
-                                <MuiThemeProvider
-                                    theme={this.pageContext.theme}
-                                    sheetsManager={this.pageContext.sheetsManager}
-                                >
-                                    <CssBaseline />
-                                    <Component pageContext={this.pageContext} {...pageProps} />
-                                </MuiThemeProvider>
-                            </JssProvider>
+                            <MuiThemeProvider theme={theme}>
+                                <CssBaseline />
+                                <Component {...pageProps} />
+                            </MuiThemeProvider>
                         </CSSTransition>
                     </TransitionGroup>
                 </Layout>
-                <style jsx global>{`
-                    .fade-enter {
-                        opacity: 0;
-                    }
-                    .fade-enter-active {
-                        opacity: 1;
-                        transition: opacity 800ms;
-                    }
-                    .fade-exit-active {
-                        opacity: 0;
-                        transition: opacity 800ms;
-                    }
-
-                    .fadeTranslate-enter {
-                        opacity: 0;
-                        transform: translate(0, 12px);
-                        position: fixed;
-                    }
-                    .fadeTranslate-enter.fadeTranslate-enter-active {
-                        opacity: 1;
-                        transform: translate(0, 0);
-                        transition: opacity 250ms ease-in 250ms, transform 250ms ease-in-out 250ms;
-                    }
-                    .fadeTranslate-exit {
-                        opacity: 1;
-                        position: fixed;
-                        transform: translate(0, 0);
-                    } 
-                    .fadeTranslate-exit.fadeTranslate-exit-active {
-                        opacity: 0;
-                        transform: translate(0, 12px);
-                        transition: opacity 175ms ease-in, transform 175ms ease-in-out;
-                    }
-                    
-                    .fix-container {
-                        position: fixed;
-                    }
-                `}
-                </style>
             </Container>
         );
     }

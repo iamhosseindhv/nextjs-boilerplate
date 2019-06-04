@@ -26,7 +26,7 @@ const Header = ({ router: { pathname } }) => (
             Blue
             </a>
         </Link>
-        <style jsx>{`
+        {/* <style jsx>{`
             header {
                 padding: 24px;
             }
@@ -39,7 +39,7 @@ const Header = ({ router: { pathname } }) => (
                 text-decoration: underline;
             }
         `}
-        </style>
+        </style> */}
     </header>
 );
 
