@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-import React from 'react';
-import App, { Container } from 'next/app';
+import React, { Fragment } from 'react';
+import App from 'next/app';
 import Head from 'next/head';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { MuiThemeProvider } from '@material-ui/core/styles';
@@ -29,7 +28,7 @@ class MyApp extends App {
     render() {
         const { Component, pageProps } = this.props;
         return (
-            <Container>
+            <Fragment>
                 <Head>
                     <title>My App</title>
                     <link rel="stylesheet" type="text/css" href="/routes.css" />
@@ -49,7 +48,7 @@ class MyApp extends App {
                         </CSSTransition>
                     </TransitionGroup>
                 </Layout>
-            </Container>
+            </Fragment>
         );
     }
 }
