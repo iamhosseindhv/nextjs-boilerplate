@@ -10,10 +10,6 @@ class MyDocument extends Document {
             <html lang="en" dir="ltr">
                 <Head>
                     <meta charSet="utf-8" />
-                    <meta
-                        name="viewport"
-                        content="user-scalable=0, initial-scale=1, minimum-scale=1, width=device-width, height=device-height"
-                    />
                     {/* PWA primary color */}
                     <meta name="theme-color" content={theme.palette.primary.main} />
                     <link

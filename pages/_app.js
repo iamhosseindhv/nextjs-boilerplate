@@ -31,6 +31,7 @@ class MyApp extends App {
             <Fragment>
                 <Head>
                     <title>My App</title>
+                    <meta name="viewport" content="user-scalable=0, initial-scale=1, minimum-scale=1, width=device-width, height=device-height" />
                     <link rel="stylesheet" type="text/css" href="/routes.css" />
                 </Head>
                 <Layout>
