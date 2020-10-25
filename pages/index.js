@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
@@ -23,9 +21,5 @@ const Index = ({ classes }) => (
         </div>
     </div>
 );
-
-Index.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
 export default withStyles(styles)(Index);

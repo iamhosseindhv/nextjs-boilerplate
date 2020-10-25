@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Link from 'next/link';
 import Router, { withRouter } from 'next/router';
@@ -42,9 +40,5 @@ const Header = ({ router: { pathname } }) => (
         </style> */}
     </header>
 );
-
-Header.propTypes = {
-    router: PropTypes.object.isRequired,
-};
 
 export default withRouter(Header);
