@@ -1,11 +1,13 @@
 {
-    "parser": "babel-eslint",
-    "extends": "airbnb",
+    "extends": ["react-app", "airbnb"],
+    "plugins": ["@typescript-eslint"],
     "env": {
-        "browser": true,
+        "es6": true,
         "node": true
     },
     "rules": {
+        "import/no-unresolved": [2, { "ignore": ["\\.(png|jpg|svg)\\?(lqip)$"] }],
+        "react/prop-types": 0,
         "indent": [
             "error",
             4
@@ -18,8 +20,14 @@
             "error",
             4
         ],
+        "object-curly-newline": 0,
+        "max-len": 0,
+        "react/no-array-index-key": 0,
+        "react/jsx-one-expression-per-line": 0,
         "react/destructuring-assignment": 0,
         "react/forbid-prop-types": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
         "react/sort-comp": 0,
         "react/jsx-filename-extension": [
             1,
@@ -39,5 +47,32 @@
                 ]
             }
         ]
-    }
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "extends": ["plugin:@typescript-eslint/recommended"],
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "sourceType": "module",
+                "project": "./tsconfig.json"
+            },
+            "rules": {
+                "@typescript-eslint/ban-ts-ignore": "off",
+                "@typescript-eslint/camelcase": "off",
+                "@typescript-eslint/no-var-requires": "off"
+            }
+        }
+    ]
 }
