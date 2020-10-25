@@ -14,12 +14,12 @@ const Header = ({ router: { pathname } }) => (
             <link rel="stylesheet" type="text/css" href="/nprogress.css" />
         </Head>
 
-        <Link prefetch href="/">
+        <Link href="/">
             <a className={pathname === '/' ? 'is-active' : ''}>
                 Red
             </a>
         </Link>
-        <Link prefetch href="/blue">
+        <Link href="/blue">
             <a className={pathname === '/blue' ? 'is-active' : ''}>
             Blue
             </a>
