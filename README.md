@@ -13,6 +13,13 @@ npm run server            // development
 npm build                 // production
 ```
 
+### Create Local Development SSL Certificates
+- Install `mkcert` as per instructions in https://github.com/FiloSottile/mkcert#installation
+- `cd certs`
+- `mkcert -install`
+- `mkcert localhost`
+
+
 ## Deploy to Heroku
 ```
 heroku create my-app

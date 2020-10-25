@@ -1,4 +1,6 @@
 import express from 'express';
+import https from 'https';
+import fs from 'fs';
 import next from 'next';
 
 
@@ -9,13 +11,26 @@ const handle = app.getRequestHandler();
 
 app.prepare()
     .then(() => {
-        const server = express();
+        const app = express();
 
-        server.get('*', (req, res) => {
+        app.get('*', (req, res) => {
             handle(req, res);
         });
 
-        server.listen(port, () => {
-            console.info(`> Ready on port ${port}`);
-        });
+
+        if (dev) {
+            const credentials = {
+                key: fs.readFileSync('certs/localhost-key.pem', 'utf8'),
+                cert: fs.readFileSync('certs/localhost.pem', 'utf8'),
+            };
+            const server = https.createServer(credentials, app);
+
+            server.listen(port, () => {
+                console.log(`> Ready on port ${port}`);
+            });
+        } else {
+            app.listen(port, () => {
+                console.log(`> Ready on port ${port}`);
+            });
+        }
     });
