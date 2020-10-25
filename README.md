@@ -8,9 +8,9 @@ A boileplate for nodejs apps which has:
 
 ## Usage
 ```
-yarn install
-yarn dev            // development
-yarn build          // production
+npm install
+npm run server            // development
+npm build                 // production
 ```
 
 ## Deploy to Heroku
