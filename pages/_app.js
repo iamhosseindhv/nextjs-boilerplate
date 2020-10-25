@@ -32,7 +32,7 @@ class MyApp extends App {
             <Container>
                 <Head>
                     <title>My App</title>
-                    <link rel="stylesheet" type="text/css" href="/static/routes.css" />
+                    <link rel="stylesheet" type="text/css" href="/routes.css" />
                 </Head>
                 <Layout>
                     <TransitionGroup>

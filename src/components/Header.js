@@ -11,7 +11,7 @@ Router.onRouteChangeError = () => NProgress.done();
 const Header = ({ router: { pathname } }) => (
     <header>
         <Head>
-            <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
+            <link rel="stylesheet" type="text/css" href="/nprogress.css" />
         </Head>
 
         <Link prefetch href="/">
