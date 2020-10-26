@@ -10,7 +10,7 @@
         "baseUrl": ".",
         "moduleResolution": "node",
         "noImplicitAny": false,
-        "strict": true,
+        "strict": false,
         "allowJs": true,
         "noEmit": true,
         "allowSyntheticDefaultImports": true,
@@ -23,7 +23,8 @@
         "preserveConstEnums": true,
         "sourceMap": true,
         "forceConsistentCasingInFileNames": true,
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "typeRoots": ["node_modules"]
     },
     "exclude": [
         "node_modules",
