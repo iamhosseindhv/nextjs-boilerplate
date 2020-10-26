@@ -6,6 +6,7 @@ A boileplate for nodejs apps which has:
 - eslint enabled
 - Custom backend server
 - Typescript enabled (while js is also allowed)
+- Multi-language support (ltr/rtl)
 - ...
 
 ## Usage
