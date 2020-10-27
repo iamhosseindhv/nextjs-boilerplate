@@ -14,7 +14,6 @@ if (!domainName) {
 class MyDocument extends Document {
     render() {
         const { canonical, userLanguage } = this.props;
-        console.log({ canonical, userLanguage, dom: process.env.DOMAIN_NAME })
         return (
             <Html lang={userLanguage} dir={userLanguage === LANGUAGES.FA ? 'rtl' : 'ltr'}>
                 <Head>
